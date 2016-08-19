@@ -1,0 +1,17 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello_app.js",
+  "dependencies": {
+      "express": "^4.14.0",
+      "redis": "^2.6.2"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "server": "node hello_app.js"
+  },
+  "author": "",
+  "license": "Public Domain"
+}

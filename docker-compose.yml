@@ -1,0 +1,23 @@
+node:
+  build: .
+  command:
+    [ "npm", "run", "server" ]
+  mem_limit: 384m
+  environment:
+    REDIS_HOST: "redis"
+    REDIS_POST: "6379"
+  ports:
+    - "3000:3000"
+  volumes:
+    - ".:/usr/src/app"
+  links:
+    - "mysql"
+    - "redis"
+
+mysql:
+  image: mysql:5.6
+  environment:
+    MYSQL_ROOT_PASSWORD: "passwd"
+
+redis:
+  image: redis:3.2.3
