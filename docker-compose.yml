@@ -6,6 +6,7 @@ node:
   environment:
     REDIS_HOST: "redis"
     REDIS_POST: "6379"
+    NODE_PATH: "/usr/local/lib/node_modules/demo/node_modules/"
   ports:
     - "3000:3000"
   volumes:
